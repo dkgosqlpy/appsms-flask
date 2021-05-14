@@ -1,0 +1,25 @@
+docker run --name python-app -p 5000:5000 my-python3-app
+
+docker tag my-python3-app:latest my-python3-app:v1.0.0-REALEASE
+
+docker run my-python3-app:v1.0.0-REALEASE
+
+
+docker run --publish 5000:5000 my-python3-app:v1.0.0-REALEASE
+
+docker run -p 5000:5000 -it --name country-server my-python3-app:v1.0.0-REALEASE
+
+docker build -t my-python3-app:v1.0.1-REALEASE .
+
+docker run -d -p 5000:5000  --network host  --name country-server my-python3-app:v1.0.0-REALEASE
+
+docker run -d -p 5000:5000  --network host  --name country-server my-python3-app:v1.0.1-REALEASE
+
+docker system prune -a
+
+
+
+
+https://pythonspeed.com/articles/docker-connection-refused/
+
+
