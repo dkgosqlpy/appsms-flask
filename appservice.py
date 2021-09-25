@@ -24,5 +24,9 @@ def country_by_id(coid):
    _countryListJson = json.dumps(_nameList)
    return _countryListJson
 
+@app.route('/client')
+def client():
+  return 'Hello World!'
+
 if __name__ == '__main__':
    app.run(host="0.0.0.0", port=int("5000"), debug=True)#debug = True
