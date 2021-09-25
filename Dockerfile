@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "./appservice.py", "--host", "0.0.0.0"]
+CMD [ "python3", "./appservice.py", "0.0.0.0:5000"]
